@@ -1,0 +1,32 @@
+# Trigger fixtures for the `programasweights` skill description.
+#
+# The `description` in SKILL.md is the trigger: an agent loads the skill when a task
+# matches it. These cases let us check (offline, heuristically) that the description
+# covers the tasks it SHOULD fire on and avoids the ones it SHOULD NOT.
+#
+# For a rigorous trigger eval, run these prompts through Anthropic's Skill Creator
+# (claude.com/plugins/skill-creator) or your agent and record the trigger rate.
+
+should_trigger:
+  - classify these support tickets into billing, bug, or feature
+  - categorize the sentiment of these product reviews
+  - tag each log line as ALERT or QUIET
+  - extract the email addresses and dates from this messy text
+  - pull the invoice numbers out of these scanned lines
+  - fix this broken JSON so it parses
+  - normalize these dates into ISO format
+  - match this misspelled product name to the closest catalog entry
+  - find near-duplicate entries in this list
+  - route each incoming message to the right support queue
+  - detect spam in these comments
+  - triage these stack traces and surface only the real errors
+  - I need a cheap local function to label text instead of calling GPT every time
+
+should_not_trigger:
+  - write a blog post about our launch
+  - refactor this React component
+  - explain how OAuth works
+  - solve this calculus problem
+  - have a back-and-forth conversation to plan my week
+  - generate a long marketing email from scratch
+  - summarize this 50-page PDF into three paragraphs

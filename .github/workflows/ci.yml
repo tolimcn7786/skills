@@ -1,0 +1,24 @@
+name: validate-skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install validator deps
+        run: pip install pyyaml
+      - name: Validate SKILL.md frontmatter (name/description, name==dir, paths exist)
+        run: python scripts/validate_skill.py
+      - name: Trigger coverage (heuristic, informational)
+        run: python scripts/eval_trigger.py
+      - name: Python syntax check (helper script)
+        run: python -m py_compile skills/programasweights/scripts/paw_eval.py
